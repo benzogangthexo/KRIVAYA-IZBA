@@ -785,3 +785,11 @@ html:not(.js) .dial-sticky {
     height: 300svh;
   }
 }
+.dial-track[data-done] .dial-call {
+  box-shadow: 0 0 0 6px rgb(143 217 200 / 0.28);
+}
+.tv__count::after {
+  display: inline-block;
+  min-width: 3ch;
+  text-align: center;
+}
