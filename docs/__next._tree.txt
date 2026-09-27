@@ -1,0 +1,6 @@
+:HL["/KRIVAYA-IZBA/_next/static/chunks/2k0fcyi30hxwv.css","style"]
+:HL["/KRIVAYA-IZBA/_next/static/media/amatic_sc_700.p.2gdhmew15l-_c.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/KRIVAYA-IZBA/_next/static/media/kurale_400-s.p.3kk635z2z6lq4.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/KRIVAYA-IZBA/_next/static/media/literata_400-s.p.090u_flf-1us-.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/KRIVAYA-IZBA/_next/static/media/literata_600-s.p.0lsi4nj138a7b.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4224,"slots":null}}},"staleTime":300,"buildId":"zDjZjV9nFNkpi9cOAXOSK"}

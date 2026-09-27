@@ -1,4 +1,4 @@
-import { Preloader } from "@/components/motion/preloader";
+import { Preloader, PreloaderCount } from "@/components/motion/preloader";
 
 import { Wordmark } from "./wordmark";
 
@@ -19,7 +19,7 @@ export function Curtain() {
           <circle className="preloader__draw" pathLength={1} cx="186" cy="112" r="7" />
           <path className="preloader__draw" pathLength={1} d="M181 140h10M181 148h10" />
         </svg>
-        <span className="preloader__count tv__count" />
+        <PreloaderCount className="tv__count" />
       </div>
       <Wordmark className="text-[2.6rem] text-brand-2" />
     </Preloader>

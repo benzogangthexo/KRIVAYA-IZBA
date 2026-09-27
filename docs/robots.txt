@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://benzogangthexo.github.io/KRIVAYA-IZBA/sitemap.xml
