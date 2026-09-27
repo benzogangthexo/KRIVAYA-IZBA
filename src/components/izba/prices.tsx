@@ -4,7 +4,8 @@ import { Section } from "@/components/layout/section";
 import { photos } from "@/content/photos";
 import type { MenuResponse } from "@/lib/menu";
 
-import { MenuList } from "./menu-list";
+import { DeferredMenuList } from "./deferred";
+import { MenuStatic } from "./menu-static";
 import { AlbumPrint } from "./print";
 
 /** Меню с ценами: данные из /api/menu, первый экран отрисован сервером (без скелетона) */
@@ -19,7 +20,7 @@ export function Prices({ initial }: { initial: MenuResponse }) {
               Всё меню
             </h2>
             <p className="mt-6 max-w-[30rem] text-fg-muted">
-              Переписали с меню в зале. Если цена поменялась, официант подскажет. Где цены не видно на фото меню, пишем «в зале».
+              Переписали с меню, которое лежит на столах. Если цена поменялась, официант подскажет. Где на фото меню цену не разобрать, пишем «в зале».
             </p>
             <AlbumPrint
               photo={photos.menuNaStole}
@@ -32,7 +33,9 @@ export function Prices({ initial }: { initial: MenuResponse }) {
           </div>
         </div>
         <div className="lg:col-span-8">
-          <MenuList initial={initial} />
+          <DeferredMenuList initial={initial}>
+            <MenuStatic initial={initial} />
+          </DeferredMenuList>
         </div>
       </Container>
     </Section>

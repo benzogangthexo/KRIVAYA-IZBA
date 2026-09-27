@@ -102,7 +102,7 @@ export function CarpetRug(props: SVGProps<SVGSVGElement>) {
 export function HutBlueprint(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      viewBox="0 0 640 430"
+      viewBox="0 0 680 430"
       fill="none"
       role="img"
       aria-label="Чертёж кривой избы: крыша чуть набок, окно с занавеской, дверь открыта с 12:00 до 24:00"
@@ -119,17 +119,18 @@ export function HutBlueprint(props: SVGProps<SVGSVGElement>) {
         <path data-draw d="M206 235c22 18 10 46 2 64m70-64c-22 18-10 46-2 64" />
         <path data-draw d="M332 352V252h58v100" />
         <path data-draw d="M152 382h284m-284-9v18m284-18v18" />
-        <path data-draw d="M312 80 468 52" strokeDasharray="3 5" />
-        <path data-draw d="M392 300h92" strokeDasharray="3 5" />
-        <path data-draw d="M202 250 118 178" strokeDasharray="3 5" />
+        <path data-draw d="M292 78 236 54" strokeDasharray="3 5" />
+        <path data-draw d="M392 300h78" strokeDasharray="3 5" />
+        <path data-draw d="M202 262 138 256" strokeDasharray="3 5" />
       </g>
       <circle cx="380" cy="304" r="3.5" fill="var(--brand-2)" />
-      <g fill="var(--fg-muted)" className="font-hand" fontSize="23">
-        <text x="474" y="58">крыша: чуть набок</text>
-        <text x="490" y="296">дверь открыта</text>
-        <text x="490" y="322">с 12:00 до 24:00</text>
-        <text x="24" y="170">окно с занавеской</text>
-        <text x="294" y="414" textAnchor="middle">ширина: на глаз</text>
+      <g fill="var(--fg-muted)" className="font-hand" fontSize="28">
+        <text x="16" y="58">крыша: чуть набок</text>
+        <text x="476" y="298">дверь открыта</text>
+        <text x="476" y="328">с 12:00 до 24:00</text>
+        <text x="16" y="246">окно с</text>
+        <text x="16" y="276">занавеской</text>
+        <text x="294" y="418" textAnchor="middle">ширина: на глаз</text>
       </g>
     </svg>
   );

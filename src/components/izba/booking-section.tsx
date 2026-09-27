@@ -1,10 +1,11 @@
 import { ArrowUpRight } from "lucide-react";
 
-import { BookingWizard } from "@/components/booking/booking-wizard";
 import { Container } from "@/components/layout/container";
 import { Eyebrow } from "@/components/layout/eyebrow";
 import { Section } from "@/components/layout/section";
 import { site, telHref } from "@/content/site";
+
+import { DeferredBooking } from "./deferred";
 
 const ext = { target: "_blank", rel: "noopener noreferrer" } as const;
 const link = "inline-flex min-h-11 items-center gap-1 text-brand-2 underline-offset-4 hover:underline";
@@ -66,7 +67,17 @@ export function BookingSection() {
           </p>
         </div>
         <div className="lg:col-span-7">
-          <BookingWizard successNote={`Администратор перезвонит и подтвердит бронь. Планы поменялись: позвоните, ${site.phone}.`} />
+          <DeferredBooking className="min-h-[34rem] sm:min-h-[25.75rem] lg:min-h-[27.25rem] xl:min-h-[26.3rem]" successNote={`Администратор перезвонит и подтвердит бронь. Планы поменялись: позвоните, ${site.phone}.`}>
+            <div className="booking flex min-h-[34rem] sm:min-h-[25.75rem] lg:min-h-[27.25rem] xl:min-h-[26.3rem] flex-col justify-center gap-4 rounded-[var(--radius-xl)] border border-line bg-surface p-5 sm:p-8">
+              <p className="t-h3">Форма брони загружается</p>
+              <p className="text-fg-muted">
+                Быстрее всего забронировать по телефону:{" "}
+                <a href={telHref} className="tabular text-brand-2 underline underline-offset-4">
+                  {site.phone}
+                </a>
+              </p>
+            </div>
+          </DeferredBooking>
         </div>
       </Container>
     </Section>
