@@ -1,6 +1,7 @@
 "use client";
 
 import { RotateCcw, Search } from "lucide-react";
+import { MotionConfig } from "motion/react";
 import { useEffect, useMemo, useState } from "react";
 
 import { HoverImageList, type HoverImageItem } from "@/components/motion/hover-image-list";
@@ -62,7 +63,7 @@ export function MenuList({ initial }: { initial: MenuResponse }) {
   }));
 
   return (
-    <div>
+    <MotionConfig reducedMotion="user">
       <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
         <FilterChips
           label="Разделы меню"
@@ -135,6 +136,6 @@ export function MenuList({ initial }: { initial: MenuResponse }) {
           />
         )}
       </div>
-    </div>
+    </MotionConfig>
   );
 }

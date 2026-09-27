@@ -64,7 +64,7 @@ export function Manifest() {
                 </dd>
               </div>
               <div className="flex flex-col">
-                <dt className="text-[0.95rem] text-[#6b4a35]">каждый день, без выходных</dt>
+                <dt className="text-[0.95rem] text-[#6b4a35]">с 12:00 до 24:00, без выходных</dt>
                 <dd className="order-first font-display text-[clamp(2.6rem,2rem+2.4vw,4rem)] leading-none">12-24</dd>
               </div>
               <div className="flex flex-col">

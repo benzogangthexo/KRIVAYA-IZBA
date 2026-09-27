@@ -1,8 +1,9 @@
 import { cva, type VariantProps } from "class-variance-authority";
-import { Slot } from "radix-ui";
 import type { ComponentProps } from "react";
 
 import { cn } from "@/lib/utils";
+
+import { Slot } from "./slot";
 
 export const buttonVariants = cva(
   "btn relative inline-flex select-none items-center justify-center gap-2 overflow-hidden whitespace-nowrap font-medium transition-[background-color,color,border-color,box-shadow,transform] duration-300 ease-[var(--ease-out-expo)] active:scale-[0.97] disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-2 focus-visible:outline-offset-3 [&_svg]:size-[1.1em] [&_svg]:shrink-0",
@@ -29,6 +30,6 @@ type ButtonProps = ComponentProps<"button"> & VariantProps<typeof buttonVariants
 
 /** shadcn/ui Button под бренд. asChild: стили на ссылку (<a>, Link) */
 export function Button({ className, variant, size, asChild = false, ...props }: ButtonProps) {
-  const Comp = asChild ? Slot.Root : "button";
+  const Comp = asChild ? Slot : "button";
   return <Comp data-slot="button" className={cn(buttonVariants({ variant, size }), className)} {...props} />;
 }

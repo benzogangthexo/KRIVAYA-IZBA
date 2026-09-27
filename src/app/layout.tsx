@@ -5,7 +5,6 @@ import type { ReactNode } from "react";
 import { Cursor } from "@/components/motion/cursor";
 import { headScript } from "@/components/motion/preloader";
 import { SmoothScroll } from "@/components/motion/smooth-scroll";
-import { Providers } from "@/components/providers";
 import { Toaster } from "@/components/ui/sonner";
 import { site } from "@/content/site";
 
@@ -128,12 +127,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         >
           К содержимому
         </a>
-        <Providers>
-          <SmoothScroll />
-          <Cursor />
-          {children}
-          <Toaster />
-        </Providers>
+        <SmoothScroll />
+        <Cursor />
+        {children}
+        <Toaster />
       </body>
     </html>
   );

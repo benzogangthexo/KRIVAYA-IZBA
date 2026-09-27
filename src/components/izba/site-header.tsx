@@ -19,7 +19,7 @@ export function SiteHeader() {
   return (
     <header className="relative z-20">
       <Container className="flex h-[var(--header-h)] items-center justify-between gap-3">
-        <a href="#hero" aria-label="Кривая изба, едальня: в начало" className="-ml-1 flex min-h-11 items-center gap-2 px-1 text-brand-2">
+        <a href="#hero" className="-ml-1 flex min-h-11 items-center gap-2 px-1 text-brand-2">
           <HutMark className="size-7 shrink-0 -rotate-6" />
           <Wordmark className="text-[1.95rem] sm:text-[2.1rem]" />
           <span className="t-eyebrow mt-1 hidden text-fg-muted sm:inline">едальня</span>

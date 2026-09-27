@@ -15,7 +15,7 @@ export function AlbumPrint({
   tilt = 0,
   sizes,
   ratioClassName = "aspect-[4/5]",
-  preload = false,
+  eager = false,
   straighten = true,
   cursorLabel,
   objectPosition,
@@ -26,7 +26,8 @@ export function AlbumPrint({
   tilt?: number;
   sizes: string;
   ratioClassName?: string;
-  preload?: boolean;
+  /** LCP-кадр: грузить сразу и с высоким приоритетом */
+  eager?: boolean;
   straighten?: boolean;
   cursorLabel?: string;
   objectPosition?: string;
@@ -46,9 +47,10 @@ export function AlbumPrint({
           alt={photo.alt}
           fill
           sizes={sizes}
-          quality={75}
+          quality={eager ? 70 : 75}
           placeholder="blur"
-          preload={preload}
+          loading={eager ? "eager" : undefined}
+          fetchPriority={eager ? "high" : undefined}
           className="object-cover"
           style={objectPosition ? { objectPosition } : undefined}
         />

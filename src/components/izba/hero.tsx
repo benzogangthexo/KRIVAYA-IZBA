@@ -81,8 +81,8 @@ export function Hero() {
             photo={photos.obed}
             caption="пельмени, борщ, селёдочка и меню"
             tilt={-2}
-            preload
-            sizes="(min-width: 1024px) 36vw, (min-width: 768px) 70vw, 92vw"
+            eager
+            sizes="(min-width: 1024px) 36vw, (min-width: 768px) 70vw, 86vw"
             cursorLabel="Ням"
             className="mx-auto w-full max-w-[34rem]"
           />
