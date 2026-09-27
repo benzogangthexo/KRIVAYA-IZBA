@@ -27,7 +27,7 @@ const pages: Page[] = [
     photo: "obed",
     caption: "пельмени, борщ и селёдочка",
     title: "Пельмени",
-    text: "Домашние пельмени, их отдельно хвалят в отзывах. На фото обед целиком: с борщом и селёдочкой.",
+    text: "Домашние, их отдельно хвалят в отзывах. На фото обед целиком.",
     rows: [
       { name: "Пельмени", price: null },
       { name: "Борщ, 250 г", price: 380 },
@@ -40,7 +40,7 @@ const pages: Page[] = [
     photo: "borsch",
     caption: "борщ, сало, бородинский",
     title: "Борщ с салом",
-    text: "На говядине, со свёклой и капустой. Рядом сало, бородинский и зелёный лук.",
+    text: "На говядине, со свёклой и капустой. Рядом сало и бородинский.",
     rows: [
       { name: "Борщ, 250 г", price: 380 },
       { name: "Солянка мясная, 320 г", price: 390 },
@@ -53,7 +53,7 @@ const pages: Page[] = [
     photo: "lyulya",
     caption: "люля, картошка из печи",
     title: "Люля на огне",
-    text: "Три вида фарша. Подают с гарниром и картошкой из печи, 340 г.",
+    text: "Три вида фарша, с гарниром и картошкой из печи, 340 г.",
     rows: [
       { name: "Из говядины", price: 590 },
       { name: "Из свинины", price: 540 },
@@ -67,7 +67,7 @@ const pages: Page[] = [
     photo: "lagman",
     caption: "лагман, за окном снег",
     title: "Лагман",
-    text: "Широкая лапша, мясо и овощи в бульоне. Из отзыва: «Брал лагман, понравился».",
+    text: "Лапша, мясо, овощи. Из отзыва: «Брал лагман, понравился».",
     rows: [{ name: "Лагман", price: null }],
     tilt: 1,
     ratio: "md:aspect-[4/5]",
@@ -77,7 +77,7 @@ const pages: Page[] = [
     photo: "seledka",
     caption: "селёдочка с лучком",
     title: "Селёдочка с лучком",
-    text: "Сельдь, картошка, красный лук и зелень. Судя по отзывам, к ней берут мандариновую настойку.",
+    text: "Сельдь, картошка, лук, зелень. В отзывах хвалят мандариновую настойку.",
     rows: [{ name: "Селёдочка с лучком", price: null }],
     tilt: 2,
     ratio: "md:aspect-[4/3]",
@@ -87,7 +87,7 @@ const pages: Page[] = [
     photo: "ryba",
     caption: "стейк из сёмги с огня",
     title: "Рыба на огне",
-    text: "Сёмга, форель и дорадо с огня, креветки гриль. Рыбу считают поштучно.",
+    text: "Сёмга, форель и дорадо с огня. Рыбу считают поштучно.",
     rows: [
       { name: "Форель на огне", price: 960 },
       { name: "Стейк из сёмги", price: 1150 },
@@ -115,31 +115,31 @@ export function MenuAlbum() {
           </p>
         </div>
 
-        <StickyStack top="clamp(0.75rem, 3svh, 2.5rem)" step={12} shrink={0.035} className="mt-12 lg:mt-16">
+        <StickyStack top="clamp(0.5rem, 2svh, 2.5rem)" step={8} shrink={0.035} className="mt-12 lg:mt-16">
           {pages.map((p, i) => (
             <article
               key={p.id}
               aria-labelledby={`page-${p.id}`}
-              className="album-page grid items-center gap-x-10 gap-y-4 p-4 sm:p-6 md:grid-cols-2 md:p-8 lg:gap-x-16 lg:p-12"
+              className="album-page grid items-center gap-x-10 gap-y-3 p-3.5 sm:p-6 md:grid-cols-2 md:gap-y-4 md:p-8 lg:gap-x-16 lg:p-12"
             >
               <AlbumPrint
                 photo={photos[p.photo]}
                 caption={p.caption}
                 tilt={p.tilt}
                 sizes="(min-width: 1024px) 34vw, (min-width: 768px) 42vw, 86vw"
-                ratioClassName={cn("aspect-[16/10] [@media(min-height:760px)]:aspect-[4/3]", p.ratio)}
+                ratioClassName={cn("aspect-[2/1] max-md:[@media(min-height:640px)]:aspect-[16/10] max-md:[@media(min-height:760px)]:aspect-[4/3]", p.ratio)}
                 cursorLabel="Ням"
                 className="mx-auto w-full md:w-[min(100%,27rem,calc((100svh-12rem)*0.78))]"
               />
               <div className="min-w-0 md:py-4">
                 <p className="t-hand text-brand-2">страница {i + 1}</p>
-                <h3 id={`page-${p.id}`} className="t-h2 mt-1">
+                <h3 id={`page-${p.id}`} className="t-h2 mt-1 max-md:text-[1.6rem]">
                   {p.title}
                 </h3>
-                <p className="mt-3 max-w-[30rem] text-fg-muted">{p.text}</p>
-                <dl className="mt-4 max-w-[30rem] border-t border-line md:mt-6">
+                <p className="mt-2 max-w-[30rem] text-fg-muted md:mt-3">{p.text}</p>
+                <dl className="mt-3 max-w-[30rem] border-t border-line md:mt-6">
                   {p.rows.map((r) => (
-                    <div key={r.name} className="flex items-baseline gap-3 border-b border-line py-2 md:py-3">
+                    <div key={r.name} className="flex items-baseline gap-3 border-b border-line py-1.5 leading-snug md:py-3 md:leading-normal">
                       <dt className="min-w-0">{r.name}</dt>
                       <span aria-hidden="true" className="h-px min-w-6 flex-1 translate-y-[-0.3em] border-b border-dotted border-line-strong" />
                       <dd className={cn("tabular shrink-0", r.price ? "font-display text-[1.25rem] text-brand" : "text-[0.95rem] text-fg-muted")}>

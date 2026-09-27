@@ -117,7 +117,7 @@ export function RotaryDial() {
   return (
     <section id="call" aria-labelledby="call-title" className="relative">
       <div ref={track} className="dial-track relative">
-        <div className="dial-sticky sticky top-0 flex min-h-[100svh] items-center overflow-clip py-6 lg:py-10">
+        <div className="dial-sticky sticky top-0 flex min-h-[100svh] items-center overflow-clip pb-[calc(var(--mobile-cta-h)+env(safe-area-inset-bottom)+0.5rem)] pt-5 md:py-8 lg:py-10">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(55%_45%_at_68%_52%,rgb(143_217_200/0.1),transparent_70%)]"
@@ -134,7 +134,7 @@ export function RotaryDial() {
             </div>
 
             <div className="flex justify-center lg:col-span-7 lg:col-start-6 lg:row-span-2 lg:row-start-1">
-              <div className="relative aspect-square w-[min(76vw,44svh,33rem)] lg:w-[min(100%,62svh,34rem)]">
+              <div className="relative aspect-square w-[min(76vw,40svh,33rem)] lg:w-[min(100%,62svh,34rem)]">
                 <div aria-hidden="true" className="absolute inset-[1.5%] rounded-full shadow-[0_40px_80px_-30px_rgb(10_0_2/0.9),0_0_0_1px_rgb(243_230_204/0.08)]" />
                 <svg viewBox="0 0 400 400" aria-hidden="true" className="absolute inset-0 size-full">
                   <defs>
@@ -221,7 +221,7 @@ export function RotaryDial() {
                 </span>
               </a>
               <div className="mt-4 flex flex-wrap gap-3 sm:mt-6">
-                <MagneticButton asChild size="lg" className="dial-call">
+                <MagneticButton asChild size="lg" className="dial-call max-sm:h-12 max-sm:px-6">
                   <a href={telHref}>
                     <Phone aria-hidden="true" />
                     Позвонить

@@ -83,7 +83,8 @@ export function MenuList({ initial }: { initial: MenuResponse }) {
             onChange={(e) => setInput(e.target.value)}
             placeholder="Найти: борщ, люля"
             maxLength={40}
-            className="field pl-11"
+            className="field"
+            style={{ paddingLeft: "2.75rem" }}
           />
         </label>
       </div>
